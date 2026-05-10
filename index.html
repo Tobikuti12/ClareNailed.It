@@ -6,9 +6,6 @@
 <title>Clare_Nailed.It — Nail Artistry</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet"/>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-  (function(){ emailjs.init({ publicKey: "IGNaaNZ-SnEQpncPq" }); })();
-</script>
 <style>
   :root {
     --blush: #f2cdd3;
@@ -1142,7 +1139,7 @@
       <span class="service-icon">🔧</span>
       <h3 class="service-name">Nail Repair</h3>
       <p class="service-desc">Broken nail? Regrowth showing? We'll fix, fill, and freshen up your set like it's brand new.</p>
-      
+      <p class="service-price">₦3,000 — ₦7,000</p>
     </div>
   </div>
 </section>
@@ -1255,6 +1252,32 @@
 </section>
 
 <!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-header">
+    <div>
+      <p class="section-label">✦ Client Love</p>
+      <h2 class="section-title">What Clients <em>Say</em></h2>
+    </div>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card reveal">
+      <p class="stars">★★★★★</p>
+      <p class="testimonial-text">"Clare's attention to detail is unmatched. My nails have never looked better, and they lasted so long!"</p>
+      <p class="testimonial-author">— Amara T.</p>
+    </div>
+    <div class="testimonial-card reveal reveal-delay-1">
+      <p class="stars">★★★★★</p>
+      <p class="testimonial-text">"Every visit is a luxury experience. She listens to what you want and delivers beyond expectations."</p>
+      <p class="testimonial-author">— Zainab O.</p>
+    </div>
+    <div class="testimonial-card reveal reveal-delay-2">
+      <p class="stars">★★★★★</p>
+      <p class="testimonial-text">"The most talented nail artist I've ever seen. Her custom designs are absolutely stunning!"</p>
+      <p class="testimonial-author">— Chioma M.</p>
+    </div>
+  </div>
+</section>
+
 <!-- BOOKING -->
 <section id="booking">
   <div class="booking-text reveal">
@@ -1440,6 +1463,12 @@
 </footer>
 
 <script>
+  // Initialize EmailJS (move this to a secure backend in production)
+  if (typeof emailjs !== 'undefined') {
+    // Note: Public key should be moved to backend in production
+    emailjs.init("IGNaaNZ-SnEQpncPq");
+  }
+
   // Video upload for about section
   function loadVideo(input) {
     if (!input.files || !input.files[0]) return;
